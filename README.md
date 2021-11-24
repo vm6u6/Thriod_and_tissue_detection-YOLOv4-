@@ -1,1 +1,1 @@
-# Thriod_and_tissue_detection-YOLOv4-
+# Thriod_and_tissue_detection-YOLOv4
