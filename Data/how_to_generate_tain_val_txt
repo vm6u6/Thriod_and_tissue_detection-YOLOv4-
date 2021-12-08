@@ -1,0 +1,6 @@
+# 輸出 train.txt
+cd train
+ls -d "$PWD"/*.jpg > train.txt
+# 輸出 dev.txt
+cd dev
+ls -d "$PWD"/*.jpg > dev.txt
