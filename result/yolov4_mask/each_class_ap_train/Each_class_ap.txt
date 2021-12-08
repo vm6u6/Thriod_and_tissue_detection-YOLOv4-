@@ -1,0 +1,9 @@
+Saving cached annotations to ./yolov4_mask3_scartch/annots.pkl
+strap_muscle :	 0.007706556841593969 
+trachea :	 0.016072901603037225 
+nodule :	 0.016965787009458028 
+artery :	 0.00011857506747079417 
+esophagus :	 3.3062648773972434e-05 
+vein :	 0.00030952223124807934 
+***************************
+mAP :	 0.006867734233597013
