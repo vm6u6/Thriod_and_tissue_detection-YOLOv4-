@@ -1,0 +1,29 @@
+Function:
+	1. voc_to_yolo.py: convert the xml file to yolo txt and make the txt and the image to the same folder 
+	2. png_to_jpg.py: transfer the file to jpg
+	3. split_train_test: divide the data which after the voc_to_yolo into three parts: train, test, val
+	4. class_num_yolotxt.py : count each class number in the training data
+	5. detector.py: evaluate the training result
+
+Darknet Cmd:
+
+	#direct to darknet folder:
+		**Training with pre-train weight(transfer learning)
+			./darknet detector train data/obj.data cfg/yolov4_mask.cfg yolov4.conv.137 -map >> visualization/train_yolov4.log 2>&1
+		**Training with scratch
+			./darknet detector train data/obj.data cfg/yolov4_mask.cfg -map >> visualization/train_yolov4.log 2>&1
+			./darknet detector train data/obj.data cfg/yolov4_mask.cfg yolov4_mask_best.weights -map >> visualization/train_yolov4.log 2>&1
+			./darknet detector train data/obj.data cfg/yolov4_12a.cfg -map  >> visualization/train_yolov4.log 2>&1
+			./darknet detector train data/obj.data cfg/yolov4_12a.cfg -map yolov4_12a_last.weights >> visualization/train_yolov4.log 2>&1
+			./darknet detector train data/obj.data cfg/yolov4_customcsp.cfg -map  >> visualization/train_yolov4.log 2>&1
+			
+		**	Observe each bouning box confidence
+			./darknet detector valid data/obj.data cfg/yolov4_mask.cfg yolov4_mask_best.weights -out ""
+			./darknet detector valid data/obj.data cfg/yolov4_customcsp.cfg yolov4_customcsp_best.weights -out ""
+			
+		**  Calculate each class mAP
+			./darknet detector map data/obj.data cfg/yolov4_mask.cfg yolov4_mask_best.weights
+			./darknet detector map data/obj.data cfg/yolov4_12a.cfg yolov4_12a_best.weights
+			./darknet detector map data/obj.data cfg/yolov4_customcsp.cfg yolov4_customcsp_best.weights
+
+

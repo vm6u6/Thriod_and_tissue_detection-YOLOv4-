@@ -1,0 +1,7 @@
+--------Apply these numbers to tune the class weight loss in yolo.cfg's [yolo] layers--------
+
+counter_per_class: 1584 , 760 , 989 , 1013 , 399 , 124
+
+nodule: 1584 trachea: 760 strap_muscle: 989 artery: 1013 vein: 399 esophagus: 124
+total_training_num: 1852
+
