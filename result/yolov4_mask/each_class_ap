@@ -1,0 +1,60 @@
+[yolo] params: iou loss: ciou (4), iou_norm: 0.07, obj_norm: 1.00, cls_norm: 1.00, delta_norm: 1.00, scale_x_y: 1.05
+nms_kind: greedynms (1), beta = 0.600000 
+Unused field: 'counter_per_class = 1584,760,989,1013,399,124'
+Total BFLOPS 127.310 
+avg_outputs = 1047617 
+ Allocate additional workspace_size = 71.05 MB 
+Loading weights from yolov4_mask_best.weights...
+ seen 64, trained: 395 K-images (6 Kilo-batches_64) 
+Done! Loaded 162 layers from weights-file 
+
+ calculation mAP (mean average precision)...
+ Detection layer: 139 - type = 28 
+ Detection layer: 150 - type = 28 
+ Detection layer: 161 - type = 28 
+
+
+ [val]
+ 232
+ detections_count = 5454, unique_truth_count = 586  
+class_id = 0, name = nodule, ap = 84.21%   	 (TP = 159, FP = 19) 
+class_id = 1, name = trachea, ap = 76.61%   	 (TP = 67, FP = 27) 
+class_id = 2, name = strap_muscle, ap = 36.39%   	 (TP = 36, FP = 37) 
+class_id = 3, name = artery, ap = 90.77%   	 (TP = 123, FP = 21) 
+class_id = 4, name = vein, ap = 59.08%   	 (TP = 30, FP = 51) 
+class_id = 5, name = esophagus, ap = 50.09%   	 (TP = 6, FP = 4) 
+
+ for conf_thresh = 0.25, precision = 0.73, recall = 0.72, F1-score = 0.72 
+ for conf_thresh = 0.25, TP = 421, FP = 159, FN = 165, average IoU = 58.40 % 
+
+ IoU threshold = 50 %, used Area-Under-Curve for each unique Recall 
+ mean average precision (mAP@0.50) = 0.661905, or 66.19 % 
+Total Detection Time: 3 Seconds
+ 
+ 
+ [train]
+ 1832
+ detections_count = 39811, unique_truth_count = 4661  
+class_id = 0, name = nodule, ap = 99.56%   	 (TP = 1564, FP = 35) 
+class_id = 1, name = trachea, ap = 96.89%   	 (TP = 717, FP = 98) 
+class_id = 2, name = strap_muscle, ap = 83.99%   	 (TP = 680, FP = 154) 
+class_id = 3, name = artery, ap = 99.25%   	 (TP = 953, FP = 76) 
+class_id = 4, name = vein, ap = 95.46%   	 (TP = 355, FP = 161) 
+class_id = 5, name = esophagus, ap = 94.37%   	 (TP = 102, FP = 8) 
+
+ for conf_thresh = 0.25, precision = 0.89, recall = 0.94, F1-score = 0.91 
+ for conf_thresh = 0.25, TP = 4371, FP = 532, FN = 290, average IoU = 74.31 % 
+
+ IoU threshold = 50 %, used Area-Under-Curve for each unique Recall 
+ mean average precision (mAP@0.50) = 0.949174, or 94.92 % 
+Total Detection Time: 25 Seconds
+
+
+
+Set -points flag:
+ `-points 101` for MS COCO 
+ `-points 11` for PascalVOC 2007 (uncomment `difficult` in voc.data) 
+ `-points 0` (AUC) for ImageNet, PascalVOC 2010-2012, your custom dataset
+ 
+
+
